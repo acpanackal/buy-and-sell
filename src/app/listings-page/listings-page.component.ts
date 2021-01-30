@@ -1,15 +1,17 @@
+import { fakeListings } from './../fake.data';
 import { Component, OnInit } from '@angular/core';
+import { Listing } from '../types';
 
 @Component({
   selector: 'app-listings-page',
   templateUrl: './listings-page.component.html',
-  styleUrls: ['./listings-page.component.scss']
+  styleUrls: ['./listings-page.component.scss'],
 })
 export class ListingsPageComponent implements OnInit {
-
-  constructor() { }
+  listings: Listing[] = [];
+  constructor() {}
 
   ngOnInit(): void {
+    this.listings = fakeListings;
   }
-
 }
