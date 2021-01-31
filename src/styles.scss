@@ -1,20 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+$bgcolor1: rgb(161, 206, 161);
+
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  background-color: black;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-  outline: none;
-  padding: 16px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
 }
 
 input,
@@ -69,14 +59,6 @@ div {
   padding: 16px;
 }
 
-.content-box {
-  background-color: #eee;
-  border-radius: 8px;
-  padding: 16px;
-  position: relative;
-  margin-bottom: 16px;
-}
-
 .buttons-container {
   position: absolute;
   right: 0px;
@@ -86,4 +68,12 @@ div {
 
 .buttons-container > button {
   margin-left: 8px;
+}
+
+.content-box {
+  background-color: $bgcolor1;
+  border-radius: 8px;
+  padding: 16px;
+  position: relative;
+  margin-bottom: 16px;
 }

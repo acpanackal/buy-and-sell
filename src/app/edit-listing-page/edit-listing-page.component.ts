@@ -1,15 +1,23 @@
+import { fakeMyListings } from './../fake.data';
+import { Listing } from './../types';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-listing-page',
   templateUrl: './edit-listing-page.component.html',
-  styleUrls: ['./edit-listing-page.component.scss']
+  styleUrls: ['./edit-listing-page.component.scss'],
 })
 export class EditListingPageComponent implements OnInit {
-
-  constructor() { }
+  listing: Listing;
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.listing = fakeMyListings.find((listing) => listing.id === id);
   }
-
+  onSubmit(): void {
+    alert('Saving changes..');
+    this.router.navigateByUrl('/my-listings');
+  }
 }

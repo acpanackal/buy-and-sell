@@ -5,13 +5,13 @@ export const fakeListings: Listing[] = [
     id: '123',
     name: 'Old Boat',
     description: 'A very old boat. Bargain price',
-    price: 700,
+    price: 19700,
   },
   {
     id: '345',
-    name: 'Computer',
-    description: 'From the 1990s, a classic!',
-    price: 50,
+    name: 'Laptop',
+    description: 'From the 2000s, a classic!',
+    price: 500,
   },
   {
     id: '456',

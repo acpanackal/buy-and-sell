@@ -1,1 +1,16 @@
-<p>my-listings-page works!</p>
+<div>
+  <div class="content-box" *ngFor="let myListing of listings">
+    <h3>
+      {{ myListing.name }}
+    </h3>
+    <p>{{ myListing.description }}</p>
+    <p>{{ myListing.price }}€</p>
+    <div class="buttons-container">
+      <a routerLink="/edit-listing/{{ myListing.id }}">
+        <button>Edit</button>
+      </a>
+      <button (click)="onDeleteClick(myListing.id)">Delete</button>
+    </div>
+  </div>
+  <a routerLink="/new-listing"><button>Create Listing</button> </a>
+</div>

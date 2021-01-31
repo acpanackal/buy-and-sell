@@ -2,6 +2,6 @@
   <a routerLink="/listings"><button>Back</button></a>
   <h2>{{ listing.name }}</h2>
   <p>{{ listing.description }}</p>
-  <p>${{ listing.price }}</p>
+  <p>{{ listing.price }}€</p>
   <a routerLink="/contact/{{ listing.id }}"> <button>contact seller</button></a>
 </div>
