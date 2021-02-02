@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ActivatedRoute, Router } from '@angular/router';
 import { EditListingPageComponent } from './edit-listing-page.component';
 
-describe('EditListingPageComponent', () => {
+xdescribe('EditListingPageComponent', () => {
   let component: EditListingPageComponent;
   let fixture: ComponentFixture<EditListingPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditListingPageComponent ]
-    })
-    .compileComponents();
+      providers: [ActivatedRoute, Router],
+      declarations: [EditListingPageComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
